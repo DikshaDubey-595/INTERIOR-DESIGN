@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | BEINTERIOR</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    width:100%;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:999;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#d9a066;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#d9a066;
+}
+
+/* ================= HERO ================= */
+
+.about-hero{
+    min-height:75vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.72)),
+    url("https://images.unsplash.com/photo-1494526585095-c41746248156");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:120px 8% 80px;
+}
+
+.about-hero-content h1{
+    font-size:72px;
+    margin-bottom:20px;
+}
+
+.about-hero-content span{
+    color:#d9a066;
+}
+
+.about-hero-content p{
+    max-width:750px;
+    margin:auto;
+    color:#ddd;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ================= STORY SECTION ================= */
+
+.section{
+    padding:100px 8%;
+}
+
+.story{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.story-image{
+    position:relative;
+}
+
+.story-image img{
+    width:100%;
+    border-radius:25px;
+}
+
+.experience{
+    position:absolute;
+    bottom:-30px;
+    right:-20px;
+
+    background:#d9a066;
+    color:black;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(217,160,102,0.3);
+}
+
+.experience h2{
+    font-size:48px;
+}
+
+.story-content h2{
+    font-size:52px;
+    margin-bottom:25px;
+}
+
+.story-content h2 span{
+    color:#d9a066;
+}
+
+.story-content p{
+    color:#bbb;
+    line-height:2;
+    margin-bottom:25px;
+    font-size:17px;
+}
+
+.story-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.story-list div{
+    color:#ddd;
+}
+
+.story-list i{
+    color:#d9a066;
+    margin-right:10px;
+}
+
+/* ================= WHY CHOOSE US ================= */
+
+.why{
+    background:#111;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:56px;
+}
+
+.section-title span{
+    color:#d9a066;
+}
+
+.section-title p{
+    color:#aaa;
+    margin-top:15px;
+}
+
+.choose-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.choose-card{
+    background:#1a1a1a;
+    padding:40px;
+    border-radius:25px;
+    transition:0.5s;
+    border:1px solid rgba(255,255,255,0.06);
+}
+
+.choose-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 40px rgba(217,160,102,0.2);
+}
+
+.choose-card i{
+    font-size:48px;
+    color:#d9a066;
+    margin-bottom:25px;
+}
+
+.choose-card h3{
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.choose-card p{
+    color:#bbb;
+    line-height:1.8;
+}
+
+/* ================= TEAM SECTION ================= */
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.team-card{
+    background:#181818;
+    border-radius:25px;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+.team-card:hover{
+    transform:translateY(-10px);
+}
+
+.team-card img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+}
+
+.team-content{
+    padding:25px;
+    text-align:center;
+}
+
+.team-content h3{
+    margin-bottom:10px;
+}
+
+.team-content p{
+    color:#aaa;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    background:
+    linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.82)),
+    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:100px 8%;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.stat-box h2{
+    font-size:52px;
+    color:#d9a066;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#ddd;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    text-align:center;
+}
+
+.cta h2{
+    font-size:58px;
+    margin-bottom:25px;
+}
+
+.cta h2 span{
+    color:#d9a066;
+}
+
+.cta p{
+    max-width:700px;
+    margin:auto;
+    color:#bbb;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.cta a{
+    display:inline-block;
+    padding:18px 40px;
+    background:#d9a066;
+    color:black;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.cta a:hover{
+    background:white;
+    transform:translateY(-5px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#0a0a0a;
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer h3{
+    color:#d9a066;
+    margin-bottom:20px;
+}
+
+.footer p,
+.footer a{
+    color:#aaa;
+    text-decoration:none;
+    line-height:2;
+}
+
+.footer a:hover{
+    color:#d9a066;
+}
+
+.bottom{
+    text-align:center;
+    padding:20px;
+    background:black;
+    color:#777;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:950px){
+
+    .story{
+        grid-template-columns:1fr;
+    }
+
+    .story-content{
+        text-align:center;
+    }
+
+    .story-list{
+        align-items:center;
+    }
+}
+
+@media(max-width:768px){
+
+    .about-hero-content h1{
+        font-size:48px;
+    }
+
+    .section-title h2{
+        font-size:40px;
+    }
+
+    .cta h2{
+        font-size:42px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        BE<span>INTERIOR</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/projects">Projects</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <h1>
+            About <span>BEINTERIOR</span>
+        </h1>
+
+        <p>
+            We transform ordinary spaces into luxurious living experiences.
+            Our interior solutions blend elegance, comfort, functionality
+            and premium aesthetics to create timeless modern interiors.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= STORY ================= -->
+
+<section class="section">
+
+    <div class="story">
+
+        <div class="story-image">
+
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+
+            <div class="experience">
+
+                <h2>8+</h2>
+
+                <p>Years Experience</p>
+
+            </div>
+
+        </div>
+
+        <div class="story-content">
+
+            <h2>
+                Our Design <span>Journey</span>
+            </h2>
+
+            <p>
+                At BEINTERIOR, we believe that interiors are more than just
+                decoration. Every home tells a story, and our mission is to
+                create spaces that reflect personality, comfort and luxury.
+            </p>
+
+            <p>
+                From modern apartments to premium villas, we craft interiors
+                that combine creativity, smart planning and premium finishing.
+            </p>
+
+            <div class="story-list">
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Luxury Modern Designs
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Premium Quality Materials
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Smart Space Planning
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    End To End Interior Solutions
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="section why">
+
+    <div class="section-title">
+
+        <h2>
+            Why Choose <span>Us</span>
+        </h2>
+
+        <p>
+            Professional interior solutions crafted with perfection
+        </p>
+
+    </div>
+
+    <div class="choose-grid">
+
+        <div class="choose-card">
+
+            <i class="fa-solid fa-house"></i>
+
+            <h3>Luxury Interiors</h3>
+
+            <p>
+                Elegant and timeless interior designs crafted with
+                premium aesthetics and functionality.
+            </p>
+
+        </div>
+
+        <div class="choose-card">
+
+            <i class="fa-solid fa-couch"></i>
+
+            <h3>Custom Furniture</h3>
+
+            <p>
+                Beautiful custom-made furniture solutions tailored
+                specially for your space and lifestyle.
+            </p>
+
+        </div>
+
+        <div class="choose-card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>Smart Lighting</h3>
+
+            <p>
+                Modern ambient lighting concepts that enhance the
+                beauty and comfort of your interiors.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TEAM ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Meet Our <span>Design Team</span>
+        </h2>
+
+        <p>
+            Passionate experts creating premium interior experiences
+        </p>
+
+    </div>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+            <div class="team-content">
+
+                <h3>Rahul Verma</h3>
+
+                <p>Lead Interior Designer</p>
+
+            </div>
+
+        </div>
+
+        <div class="team-card">
+
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+            <div class="team-content">
+
+                <h3>Priya Kapoor</h3>
+
+                <p>Creative Design Head</p>
+
+            </div>
+
+        </div>
+
+        <div class="team-card">
+
+            <img src="https://randomuser.me/api/portraits/men/55.jpg">
+
+            <div class="team-content">
+
+                <h3>Arjun Mehta</h3>
+
+                <p>Project Architect</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat-box">
+
+            <h2>500+</h2>
+
+            <p>Projects Completed</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>200+</h2>
+
+            <p>Happy Clients</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>12+</h2>
+
+            <p>Design Awards</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>8+</h2>
+
+            <p>Years Experience</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="section cta">
+
+    <h2>
+        Let’s Design Your <span>Dream Space</span>
+    </h2>
+
+    <p>
+        Experience luxury interior solutions crafted specially
+        for modern lifestyles and premium living.
+    </p>
+
+    <a href="/contact">
+        Book Free Consultation
+    </a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div>
+
+        <h3>BEINTERIOR</h3>
+
+        <p>
+            Luxury interior solutions crafted with elegance,
+            creativity and premium aesthetics.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h3>Quick Links</h3>
+
+        <a href="/">Home</a><br>
+
+        <a href="/services">Services</a><br>
+
+        <a href="/projects">Projects</a><br>
+
+        <a href="/gallery">Gallery</a>
+
+    </div>
+
+    <div>
+
+        <h3>Services</h3>
+
+        <a href="#">Living Room</a><br>
+
+        <a href="#">Kitchen Interior</a><br>
+
+        <a href="#">Bedroom Design</a><br>
+
+        <a href="#">Luxury Decor</a>
+
+    </div>
+
+    <div>
+
+        <h3>Contact</h3>
+
+        <p>📍 India</p>
+
+        <p>📞 +91 9876543210</p>
+
+        <p>📧 design@beinterior.com</p>
+
+    </div>
+
+</footer>
+
+<div class="bottom">
+    © 2026 BEINTERIOR — All Rights Reserved
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

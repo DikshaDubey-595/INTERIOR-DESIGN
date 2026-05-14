@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Luxury Dashboard</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background: radial-gradient(circle at top left, #0a0a0a, #000);
+    color:white;
+}
+
+/* TOP BAR */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#111;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#d9a066;
+}
+
+.logout a{
+    color:#ff4d6d;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    padding:70px 8%;
+}
+
+.hero h1{
+    font-size:52px;
+}
+
+.hero span{
+    color:#d9a066;
+}
+
+.hero p{
+    opacity:0.7;
+    max-width:600px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:40px 8%;
+}
+
+/* PREMIUM CLICKABLE CARDS */
+.card{
+    position:relative;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:18px;
+    padding:25px;
+    cursor:pointer;
+    transition:0.4s;
+    overflow:hidden;
+}
+
+/* glow effect */
+.card::before{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle,#d9a06633,transparent);
+    opacity:0;
+    transition:0.5s;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    border:1px solid #d9a066;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+.icon{
+    font-size:32px;
+}
+
+.card h3{
+    margin:10px 0;
+    color:#d9a066;
+}
+
+.card p{
+    font-size:14px;
+    opacity:0.8;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 15px;
+    background:#d9a066;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="logo">Interior <span>Studio</span></div>
+    <div class="logout"><a href="/logout">Logout</a></div>
+</div>
+
+<div class="hero">
+
+    <h1>Welcome <span>{{ user }}</span> 👋</h1>
+    <p>Exclusive interior design tools, premium services and personalized experience unlocked just for you.</p>
+
+</div>
+
+<div class="grid">
+
+    <div class="card" onclick="location.href='/consultation'">
+        <div class="icon">🏠</div>
+        <h3>Book Designer</h3>
+        <p>1-on-1 luxury interior consultation</p>
+        <a class="btn" href="/consultation">Open</a>
+    </div>
+
+    <div class="card" onclick="location.href='/projects'">
+        <div class="icon">📁</div>
+        <h3>My Projects</h3>
+        <p>Track your interior work progress</p>
+        <a class="btn" href="/projects">View</a>
+    </div>
+
+    <div class="card" onclick="location.href='/gallery'">
+        <div class="icon">🖼️</div>
+        <h3>Premium Designs</h3>
+        <p>Exclusive luxury interior ideas</p>
+        <a class="btn" href="/gallery">Explore</a>
+    </div>
+
+    <div class="card" onclick="location.href='/contact'">
+        <div class="icon">💬</div>
+        <h3>Direct Support</h3>
+        <p>Talk to your personal designer assistant</p>
+        <a class="btn" href="/contact">Chat</a>
+    </div>
+
+    <!-- EXTRA UNIQUE FEATURES -->
+    <div class="card" onclick="alert('AI Feature Coming Soon 🚀')">
+        <div class="icon">🤖</div>
+        <h3>AI Design Ideas</h3>
+        <p>Get AI generated interior concepts</p>
+        <a class="btn">Try</a>
+    </div>
+
+    <div class="card" onclick="alert('Mood Board Generator Coming Soon 🎨')">
+        <div class="icon">🎨</div>
+        <h3>Mood Board</h3>
+        <p>Create your dream home style</p>
+        <a class="btn">Create</a>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Luxury Interior Studio | Premium Experience
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projects</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#000;
+    font-family:Arial;
+    color:white;
+}
+
+/* ===== SLIDER ===== */
+
+.slider{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+.slides{
+    display:flex;
+    width:400%;
+    animation:slide 18s infinite;
+}
+
+.slides img{
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+}
+
+@keyframes slide{
+
+0%{transform:translateX(0);}
+25%{transform:translateX(0);}
+
+30%{transform:translateX(-100vw);}
+50%{transform:translateX(-100vw);}
+
+55%{transform:translateX(-200vw);}
+75%{transform:translateX(-200vw);}
+
+80%{transform:translateX(-300vw);}
+100%{transform:translateX(-300vw);}
+}
+
+/* ===== OVERLAY ===== */
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay h1{
+    font-size:70px;
+}
+
+.overlay span{
+    color:#d9a066;
+}
+
+/* ===== PROJECT SECTION ===== */
+
+.projects{
+    padding:80px 10%;
+    background:#0f0f0f;
+}
+
+.projects h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.projects h2 span{
+    color:#d9a066;
+}
+
+/* GRID */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+
+.card{
+    background:#1a1a1a;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.card h3{
+    margin:0;
+    color:#d9a066;
+}
+
+.card p{
+    font-size:14px;
+    color:#ccc;
+    margin-top:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== SLIDER ===== -->
+<div class="slider">
+
+    <div class="slides">
+
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+
+    </div>
+
+    <div class="overlay">
+        <h1>Our Luxury <span>Projects</span></h1>
+    </div>
+
+</div>
+
+<!-- ===== PROJECTS SECTION ===== -->
+
+<div class="projects">
+
+    <h2>Featured <span>Projects</span></h2>
+
+    <div class="project-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+            <div class="card-content">
+                <h3>Modern Villa</h3>
+                <p>Luxury villa design with modern architecture and open space concept.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+            <div class="card-content">
+                <h3>Interior Design</h3>
+                <p>Elegant interior design with premium lighting and wooden finish.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+            <div class="card-content">
+                <h3>Office Space</h3>
+                <p>Modern corporate office with minimal and productive environment.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+            <div class="card-content">
+                <h3>Luxury Home</h3>
+                <p>High-end residential project with smart home integration.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

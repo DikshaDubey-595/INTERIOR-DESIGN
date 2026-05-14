@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | BEINTERIOR</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:999;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#d9a066;
+}
+
+.nav-links a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+}
+
+.nav-links a:hover{
+    color:#d9a066;
+}
+
+/* HERO */
+
+.hero{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:120px 8% 80px;
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero span{
+    color:#d9a066;
+}
+
+.hero p{
+    color:#ccc;
+    max-width:700px;
+    margin:auto;
+    margin-top:20px;
+    line-height:1.8;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    margin-top:80px;
+}
+
+.section-title h2{
+    font-size:50px;
+}
+
+.section-title span{
+    color:#d9a066;
+}
+
+.section-title p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+/* SERVICES */
+
+.services{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#181818;
+    border-radius:25px;
+    overflow:hidden;
+    transition:0.5s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 40px rgba(217,160,102,0.2);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.content{
+    padding:25px;
+}
+
+.content i{
+    color:#d9a066;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.content h2{
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#aaa;
+    line-height:1.7;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    padding:80px 8%;
+}
+
+.cta h2{
+    font-size:50px;
+}
+
+.cta span{
+    color:#d9a066;
+}
+
+.cta p{
+    color:#bbb;
+    max-width:700px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+.cta a{
+    display:inline-block;
+    padding:15px 35px;
+    background:#d9a066;
+    color:black;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.cta a:hover{
+    background:white;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#0a0a0a;
+    padding:60px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.footer h3{
+    color:#d9a066;
+}
+
+.footer a,p{
+    color:#aaa;
+    text-decoration:none;
+    line-height:2;
+}
+
+.bottom{
+    text-align:center;
+    padding:15px;
+    background:black;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">BE<span>INTERIOR</span></div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Our <span>Services</span></h1>
+        <p>
+            We provide premium interior design solutions that transform
+            ordinary spaces into luxurious living experiences.
+        </p>
+    </div>
+</section>
+
+<!-- TITLE -->
+<div class="section-title">
+    <h2>What We <span>Offer</span></h2>
+    <p>Luxury design services crafted for modern lifestyle</p>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+        <div class="content">
+            <i class="fa-solid fa-house"></i>
+            <h2>Full Home Interior</h2>
+            <p>Complete luxury home interior design solutions.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+        <div class="content">
+            <i class="fa-solid fa-kitchen-set"></i>
+            <h2>Modular Kitchen</h2>
+            <p>Modern kitchens with smart storage and premium finish.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36">
+        <div class="content">
+            <i class="fa-solid fa-couch"></i>
+            <h2>Living Room Design</h2>
+            <p>Elegant and comfortable luxury living spaces.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Let’s Build Your <span>Dream Home</span></h2>
+    <p>
+        Contact us today for premium interior consultation and design planning.
+    </p>
+    <a href="/contact">Get Started</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div>
+        <h3>BEINTERIOR</h3>
+        <p>Luxury interior design solutions for modern homes.</p>
+    </div>
+
+    <div>
+        <h3>Links</h3>
+        <a href="/">Home</a><br>
+        <a href="/about">About</a><br>
+        <a href="/services">Services</a>
+    </div>
+
+    <div>
+        <h3>Contact</h3>
+        <p>India</p>
+        <p>design@beinterior.com</p>
+    </div>
+</footer>
+
+<div class="bottom">
+    © 2026 BEINTERIOR
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

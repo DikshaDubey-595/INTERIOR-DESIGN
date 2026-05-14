@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gallery</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#111;
+    font-family:Arial;
+    color:white;
+}
+
+/* ===== TITLE ===== */
+
+.title{
+    text-align:center;
+    padding:90px 20px 30px;
+}
+
+.title h1{
+    font-size:65px;
+    margin:0;
+}
+
+.title span{
+    color:#d9a066;
+}
+
+/* ===== GALLERY ===== */
+
+.gallery{
+    columns:4 250px;
+    column-gap:15px;
+    padding:30px;
+}
+
+/* ===== ITEM ===== */
+
+.item{
+    position:relative;
+    margin-bottom:15px;
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.item img{
+    width:100%;
+    display:block;
+    transition:0.5s;
+}
+
+.item:hover img{
+    transform:scale(1.1);
+}
+
+/* OVERLAY */
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    opacity:0;
+    transition:0.4s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.item:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    color:#fff;
+    font-size:20px;
+    border:1px solid #d9a066;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px){
+    .title h1{
+        font-size:50px;
+    }
+
+    .gallery{
+        columns:3 200px;
+        padding:20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    .title h1{
+        font-size:40px;
+    }
+
+    .gallery{
+        columns:2 150px;
+        padding:15px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px){
+    .title h1{
+        font-size:32px;
+    }
+
+    .gallery{
+        columns:1 100%;
+        padding:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">
+    <h1>Design <span>Gallery</span></h1>
+</div>
+
+<div class="gallery">
+
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+        <div class="overlay"><h3>Modern Villa</h3></div>
+    </div>
+
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+        <div class="overlay"><h3>Luxury Interior</h3></div>
+    </div>
+
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+        <div class="overlay"><h3>Office Design</h3></div>
+    </div>
+
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+        <div class="overlay"><h3>Modern Home</h3></div>
+    </div>
+
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36">
+        <div class="overlay"><h3>Living Space</h3></div>
+    </div>
+
+    <div class="item">
+        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6">
+        <div class="overlay"><h3>Architecture</h3></div>
+    </div>
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

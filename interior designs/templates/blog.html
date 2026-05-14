@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Blog</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* ===== TITLE ===== */
+
+.title{
+    text-align:center;
+    padding:90px 20px 40px;
+}
+
+.title h1{
+    font-size:60px;
+    margin:0;
+}
+
+.title span{
+    color:#d9a066;
+}
+
+/* ===== BLOG GRID ===== */
+
+.blog-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+    padding:40px 10%;
+}
+
+/* ===== CARD ===== */
+
+.card{
+    background:#181818;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* IMAGE */
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+
+.content{
+    padding:20px;
+}
+
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    background:#d9a066;
+    color:#000;
+    font-size:12px;
+    border-radius:5px;
+    margin-bottom:10px;
+}
+
+/* TITLE */
+
+.content h3{
+    margin:10px 0;
+    font-size:20px;
+}
+
+/* TEXT */
+
+.content p{
+    font-size:14px;
+    color:#ccc;
+    line-height:1.6;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 15px;
+    background:#d9a066;
+    color:#000;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#c89255;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width:600px){
+    .title h1{
+        font-size:40px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="title">
+    <h1>Our <span>Blog</span></h1>
+</div>
+
+<div class="blog-container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+        <div class="content">
+            <span class="tag">Interior</span>
+            <h3>Modern Home Design Ideas</h3>
+            <p>Explore the latest trends in modern home interiors and luxury designs for 2026.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+        <div class="content">
+            <span class="tag">Luxury</span>
+            <h3>Luxury Living Room Setup</h3>
+            <p>How to create a premium luxury living room with minimal budget and smart design.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+        <div class="content">
+            <span class="tag">Office</span>
+            <h3>Modern Office Interiors</h3>
+            <p>Design productive and stylish office spaces that improve creativity and focus.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6">
+        <div class="content">
+            <span class="tag">Architecture</span>
+            <h3>Future Architecture Trends</h3>
+            <p>Discover how architecture is evolving with smart homes and sustainable designs.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

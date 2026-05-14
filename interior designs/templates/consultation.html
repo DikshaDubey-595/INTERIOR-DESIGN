@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Contact</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* ===== MAIN LAYOUT ===== */
+
+.container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+/* ===== FORM BOX ===== */
+
+.form-box{
+    width:450px;
+    background:#181818;
+    padding:40px;
+    border-radius:20px;
+}
+
+.form-box h1{
+    margin-bottom:25px;
+    font-size:40px;
+}
+
+.form-box span{
+    color:#d9a066;
+}
+
+/* INPUTS */
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    background:#222;
+    border:none;
+    color:white;
+    border-radius:10px;
+    outline:none;
+}
+
+/* BUTTON */
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#d9a066;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#c89255;
+}
+
+/* ===== CONTACT INFO ===== */
+
+.info{
+    width:300px;
+}
+
+.info h2{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.info p{
+    color:#ccc;
+    margin-bottom:15px;
+    line-height:1.6;
+}
+
+.info span{
+    color:#d9a066;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px){
+    .container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .form-box{
+        width:100%;
+        max-width:500px;
+    }
+
+    .info{
+        width:100%;
+        max-width:400px;
+    }
+}
+
+@media (max-width: 500px){
+    .form-box h1{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- FORM -->
+    <div class="form-box">
+
+        <h1>Contact <span>Us</span></h1>
+
+        <form>
+
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <input type="text" placeholder="Subject">
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button>Send Message</button>
+
+        </form>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="info">
+
+        <h2>Get In <span>Touch</span></h2>
+
+        <p><span>Phone:</span> +91 98765 43210</p>
+        <p><span>Email:</span> info@yourwebsite.com</p>
+        <p><span>Location:</span> India</p>
+
+        <p>
+            We are available for free consultation and premium interior design services.
+        </p>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
